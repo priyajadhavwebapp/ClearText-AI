@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClearText — Understand Anything</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">C</span><span>ClearText</span></a>
+    <span class="top-note">Complex information, made clear.</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span class="dot"></span> YOUR PERSONAL CLARITY ASSISTANT</div>
+      <h1>Understand the <span>important stuff.</span></h1>
+      <p>Paste confusing text, reports, or instructions. ClearText turns them into simpler language and highlights what matters.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-heading">
+          <div><span class="step">01</span><h2>Original information</h2></div>
+          <button id="clearBtn" class="text-button" type="button">Clear</button>
+        </div>
+        <label for="sourceText">Paste text you want to understand</label>
+        <textarea id="sourceText" placeholder="Paste a paragraph, policy, technical explanation, or set of instructions here…"></textarea>
+        <div class="input-footer">
+          <span id="charCount">0 characters</span>
+          <button id="exampleBtn" class="secondary-button" type="button">Try an example</button>
+        </div>
+        <button id="simplifyBtn" class="primary-button" type="button"><span>✦</span> Simplify information <span class="arrow">→</span></button>
+        <p class="privacy-note">🔒 Your text stays in this browser. This demo does not upload your text.</p>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-heading">
+          <div><span class="step">02</span><h2>Clear explanation</h2></div>
+          <span id="statusBadge" class="status-badge">Waiting for text</span>
+        </div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">✧</div>
+          <h3>Clarity starts here</h3>
+          <p>Your simplified explanation, key points, and unfamiliar terms will appear here.</p>
+        </div>
+        <div id="results" class="results hidden">
+          <div class="result-section">
+            <div class="result-label"><span class="label-icon">Aa</span> IN SIMPLE WORDS</div>
+            <p id="simpleText" class="simple-text"></p>
+          </div>
+          <div class="result-section">
+            <div class="result-label"><span class="label-icon">✓</span> KEY TAKEAWAYS</div>
+            <ul id="keyPoints" class="key-points"></ul>
+          </div>
+          <div class="result-section">
+            <div class="result-label"><span class="label-icon">?</span> TERMS TO KNOW</div>
+            <div id="terms" class="terms"></div>
+          </div>
+          <div class="result-section decision-box">
+            <div class="result-label"><span class="label-icon">◎</span> WHAT TO DO NEXT</div>
+            <p id="nextStep"></p>
+          </div>
+          <button id="copyBtn" class="secondary-button copy-button" type="button">Copy explanation</button>
+        </div>
+      </div>
+    </section>
+    <section class="disclaimer"><strong>Note:</strong> ClearText uses simple text-processing rules in this demo. Always verify important legal, medical, financial, or safety information against the original source or a qualified professional.</section>
+    <footer>ClearText <span>•</span> Built to make information easier to understand</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
